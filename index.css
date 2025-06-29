@@ -1,0 +1,129 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: url('https://t4.ftcdn.net/jpg/01/01/05/97/360_F_101059744_v3iOQuoEiSyUxcgiILvDzWprTkShqd7c.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+  text-align: center;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+.header {
+  margin-top: 20px;
+}
+
+h1, h2, h3 {
+  margin: 0.5rem 0;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
+}
+
+.btn-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  max-width: 500px;
+  margin: auto;
+}
+
+.btn {
+  width: 40vw;
+  height: 40vw;
+  max-width: 180px;
+  max-height: 180px;
+  border-radius: 20%;
+  border: 10px solid black;
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  text-shadow: 1px 1px 2px black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+.btn:active {
+  transform: scale(0.95);
+}
+
+.btn::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  border-radius: 20%;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.btn:hover::after {
+  opacity: 1;
+}
+
+.red    { background-color: #d95980; }
+.yellow { background-color: #f99b45; }
+.green  { background-color: #0ca1cf; }
+.purple { background-color: #5a6fae; }
+
+.flash     { filter: brightness(200%); }
+.userflash { filter: brightness(150%); }
+
+.game-over {
+  animation: shake 0.4s ease-in-out;
+  background-color: rgba(255, 0, 0, 0.5) !important;
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-10px); }
+  50% { transform: translateX(10px); }
+  75% { transform: translateX(-10px); }
+  100% { transform: translateX(0); }
+}
+
+@media (max-width: 500px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2, h3 {
+    font-size: 1.2rem;
+  }
+
+  .btn {
+    font-size: 1rem;
+  }
+}
+.start-button {
+  margin-top: 1rem;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  background-color: #ffffffcc;
+  color: #333;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.start-button:hover {
+  background-color: #fff;
+  color: #000;
+}
